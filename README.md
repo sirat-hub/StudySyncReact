@@ -5,8 +5,9 @@
 </div>
 
 ## 🌐 Links
-- **Live Demo (Vercel):** [INSERT DEPLOYMENT LINK HERE]
-- **GitHub Repository:** [INSERT GITHUB LINK HERE]
+- **Live Demo : studysync-fyp.web.app
+- **GitHub Repository:** https://github.com/sirat-hub/StudySyncReact
+
 
 ---
 
@@ -66,24 +67,4 @@ studysync/
 
 ---
 
-## 🚀 How to Compile & Run
-1. Ensure Node.js is installed.
-2. In the project root, run:
-   ```bash
-   npm install
-   npm run dev
-   ```
-3. The Terminal will output `localhost:5173`. Open it inside Google Chrome.
-4. **To view the CRUD operations:** Navigate to the "**Groups (CRUD)**" link in the Navbar to test Creating, Editing, Searching, and deleting elements utilizing native Array logic. 
 
----
-
-## 📷 Screenshots
-*(Replace the below links with your physical file screenshots before submission! Task: "Screenshots of each web page + VS Code file structure")*
-
-- **VS Code Structure:** `[Insert Screenshot]`
-- **Home Page:** `[Insert Screenshot]`
-- **About Us Page:** `[Insert Screenshot]`
-- **Groups / CRUD App Page:** `[Insert Screenshot]`
-- **Sign In / Sign Up:** `[Insert Screenshot]`
-- **Contact Us:** `[Insert Screenshot]`
