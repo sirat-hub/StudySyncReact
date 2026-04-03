@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@theme {
+  --color-obsidian: var(--bg-primary);
+  --color-charcoal: var(--bg-secondary);
+  --color-pastel-purple: var(--accent-purple);
+  --color-pastel-green: var(--accent-green);
+  --color-soft-pink: var(--accent-pink);
+  --color-neon-blue: var(--accent-blue);
+  --font-sans: 'Space Grotesk', 'Outfit', system-ui, sans-serif;
+}
+
+:root {
+  /* LIGHT THEME */
+  --bg-primary: #F7F7F8;
+  --bg-secondary: #FFFFFF;
+  --text-main: #050508;
+  --text-muted: #555560;
+  --accent-purple: #9554FF;
+  --accent-green: #00B341;
+  --accent-pink: #FF4D85;
+  --accent-blue: #00B4D8;
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(0, 0, 0, 0.1);
+  --glow-opacity: 0.15;
+}
+
+[data-theme="dark"] {
+  /* DARK THEME */
+  --bg-primary: #050508;
+  --bg-secondary: #12121A;
+  --text-main: #FFFFFF;
+  --text-muted: #9CA3AF;
+  --accent-purple: #D4BFFF;
+  --accent-green: #B8FFCC;
+  --accent-pink: #FFCce0;
+  --accent-blue: #A1F4FF;
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glow-opacity: 0.2;
+}
+
+body {
+  @apply bg-obsidian text-[color:var(--text-main)] font-sans antialiased overflow-x-hidden transition-colors duration-300;
+  background-color: var(--bg-primary);
+  background-image: 
+    radial-gradient(circle at 15% 50%, rgba(212, 191, 255, var(--glow-opacity)), transparent 25%),
+    radial-gradient(circle at 85% 30%, rgba(184, 255, 204, var(--glow-opacity)), transparent 25%);
+}
+
+.text-gray-400 {
+  color: var(--text-muted);
+}
+.text-white {
+  color: var(--text-main);
+}
+
+.glass-panel {
+  background-color: var(--glass-bg);
+  backdrop-filter: blur(24px);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.1);
+}
+
+.glass-button {
+  background: linear-gradient(135deg, var(--glass-bg), transparent);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* Floating Blob Animations */
+@keyframes blob1 {
+  0% { transform: translate(0px, 0px) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+  100% { transform: translate(0px, 0px) scale(1); }
+}
+@keyframes blob2 {
+  0% { transform: translate(0px, 0px) scale(1); }
+  33% { transform: translate(-30px, 50px) scale(1.2); }
+  66% { transform: translate(20px, -20px) scale(0.8); }
+  100% { transform: translate(0px, 0px) scale(1); }
+}
+
+.animate-blob1 { animation: blob1 10s infinite alternate ease-in-out; }
+.animate-blob2 { animation: blob2 12s infinite alternate ease-in-out; }
+.animation-delay-2000 { animation-delay: 2s; }
+.animation-delay-4000 { animation-delay: 4s; }
+
+.text-glow {
+  text-shadow: 0 0 20px rgba(212, 191, 255, 0.5);
+}
